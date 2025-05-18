@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "My React Chrome Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service-worker": "background.js"
+  },
+  "permissions": [
+    "desktopCapture",
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": ["<all_urls>"]
+}

@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import React from 'react';
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [showNav, setShowNav] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = window.innerHeight * 0.8;
@@ -26,8 +26,8 @@ const Navbar = () => {
 
         <div className="text-4xl font-Khand text-blue-700">DoomSpray</div>
 
-        <button className="px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-500 text-white font-Khand shadow-lg transition">
-          Log In
+        <button className="px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-500 text-white font-Khand shadow-lg transition" onClick={props.render}>
+          Go To Scanner
         </button>
       </div>
     </div>
